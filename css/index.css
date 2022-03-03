@@ -1,0 +1,57 @@
+html, body{
+    height:100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+.Imagen-AP{
+     display: inline-block;
+    position: absolute;
+    left: 2%;
+ } 
+
+.container-SUP-Header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 0;
+    
+}
+
+header{
+    background-color:#222F40;
+}
+
+.Button-Login{
+    background-color: transparent;
+    border-radius: 15%;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    margin-inline: 1px;
+}
+
+.container-ButtonLogin{
+    position: absolute;
+    right: 3%;
+    background-color: transparent;
+}
+
+.Logo-Mail{
+    position: absolute;
+    right: 15%;
+    background-color: transparent;
+}
+
+.Logo-Linkedin{
+    position: absolute;
+    right: 13%;
+    background-color:transparent;
+}
+
+.Logo-GitHub{
+    position: absolute;
+    right: 11%;
+    background-color: transparent;
+}
