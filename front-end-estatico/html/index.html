@@ -51,10 +51,6 @@
                </div>
               
             </div>
-
-           
-
-            
        </div>
             
     </header>
@@ -62,8 +58,12 @@
     <div class="container container-Foto-Perfil">
         <div class="row">
             <div class="col">
-                 
-               <img src="../images/foto-escalada.png"class="img-fluid Foto-Perfil" alt="Foto">
+                <div class="container-Edits">
+                    <img src="../images/foto-escalada.png"class="img-fluid Foto-Perfil" alt="Foto">
+                    <button type="button" class="Button-Edit" >
+                        <img src="../images/logos edicion/edit_icon.png" alt="edit">
+                    </button>
+                </div>
                <div class="Descripcion">
                 <h2><strong>Amico Pablo</strong></h2>
                    <h4>
@@ -80,15 +80,56 @@
 
    <!-- Exp & Edu -->
    <div class="container-fluid contenedores-body">
-       <h2 class="Titulos"><strong>Experiencia</strong></h2>
+        <h2 class="Titulos"><strong>Experiencia</strong> 
+            <button type="button" class="Button-Edit">
+            <img src="../images/logos edicion/add_icon.png" alt="">
+            </button>
+        </h2>
+       
        <div class="row">
            <div class="col-2 img-container">
                 <img src="../images/ATEM.png" class="Imagenes-contenido" alt="ATEM-Logo">
             </div>
             <div class="col-sm container-text">
-                <h3 class="SubTitulos"><strong>Atención al Público</strong> </h3>
-                <p class="Contenido">Asociación Trabajadores del Estado Mutual</p>
-                <p class = "Contenido">Septiembre 2013 - Actualidad</p>
+                <h3 class="SubTitulos"><strong>Atención al Público</strong> 
+                    <div class="Button-Edit" onclick="cambiar_parrafo()">
+                        <a href="#">
+                            <img src="../images/logos edicion/edit_icon.png" alt="edit">
+                        </a>
+                    </div>
+                </h3>
+                    
+                    
+                <div>
+                    <div class="parrafos-editables">
+                        <p id="Lugar-Trabajo"  class="Contenido">Asociación Trabajadores del Estado Mutual 
+                            <div id="cont-Atencion" class="Button-Edit" onclick="cambiar_lugar_trabajo()"   style="display: none; scale: 0.8;">
+                                <a href="#">
+                                    <img src="../images/logos edicion/edit_icon.png" alt="edit">
+                                </a>
+                            </div>
+                        </p>
+                    </div>
+                    <div>
+                        <input id="Atencion-al-publico" type="text" oninput="myFunction2(this.value)" style="display: none">
+                    </div>
+                    
+                    <div class="parrafos-editables">
+                        <p id="tiempo"  class="Contenido">Septiembre 2013 - Actualidad
+                            <div id="tiempo-Atencion" class="Button-Edit" onclick="cambiar_antiguedad()"   style="display: none; scale: 0.8;">
+                                <a href="#">
+                                    <img src="../images/logos edicion/edit_icon.png" alt="edit">
+                                </a>
+                            </div>
+                        </p>                    
+                    </div>
+
+                    <div>
+                        <input id="Antiguedad" class="Button-Edit" type="text" oninput="myFunction1(this.value)" style="display: none">
+                    </div>
+                </div>
+                
+                
             </div>
        </div>
        
@@ -132,7 +173,21 @@
 
    </div>
 
+   <div class="container-fluid contenedores-body">
+        <h2 class="Titulos"><strong>Hard Skills & Soft Skills</strong></h2>
+        <div class="Skills-bar">
+            <div class="grafico"><strong class="barra" style="width: 75%;">C++</strong></div>
+        </div>
+
+        <div class="Skills-bar">
+            <div class="grafico"><strong class="barra" style="width: 50%;">C#</strong></div>
+        </div>
+        
+        
+   </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin= "anonymous"></script>
+    <script src="../Javascript/index.js" ></script>
 </body>
 </html>
 

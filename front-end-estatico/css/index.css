@@ -2,7 +2,7 @@ body{
     /* background-color: #D3DEDC; */
     /* background-color: #7C99AC; */
     height: 100%;
-    /* background-color: grey; */
+     background-color: grey;
     /* background: linear-gradient(to bottom,#1C658C,#EEEEEE ); */
 }
 
@@ -92,13 +92,14 @@ header{
     border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
     border-color: lightgray;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Foto-Perfil{
     border-radius: 50%;
     margin-left: auto;
-    margin-right: auto;
+    /* margin-right: auto; */
     margin-top: 100px;
     display: flex;
     margin-top: 10px;
@@ -147,17 +148,73 @@ header{
 }
 
 .SubTitulos{
-    display: block;
+    display: flex;
     margin-left: 10px;
     margin-bottom: 0px;
-    
 }
-
 
 .Contenido{
+    display: flex;
     margin-left: 10px;
     margin-bottom: 0px;
 }
+
+.parrafos-editables{
+    display: flex;
+}
+
+.Skills-bar{
+    margin-bottom: 0.5em;
+}
+
+
+.grafico {
+    position: relative; /* IE is dumb */
+    width: 500px;
+    border: 1px solid #11324D;
+    padding: 2px;
+    margin: auto;
+}
+.grafico .barra {
+   display: block;
+   position: relative;
+   background: #11324D;
+   text-align: center;
+   color: #fff;
+   height: 2em;
+   line-height: 2em;
+ 
+   
+}
+.grafico .barra span {
+   position: absolute; left: 1em;
+}
+
+
+/* logos de edicion */
+
+.Titulos .Button-Edit{
+    scale: 0.8;
+}
+
+.SubTitulos .Button-Edit{
+    scale: 0.8;
+}
+
+
+.container-Edits{
+    display: flex;
+}
+
+
+.Button-Edit{
+    background-color: transparent;
+    border-style: none;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+
 
 @media (max-width:580px){
     .Linkedin, .Correo, .Github{
@@ -194,5 +251,9 @@ header{
     .Contenido{
         width: 100%;
         text-align: center;
+    }
+
+    .grafico{
+        width: 300px;
     }
 }
