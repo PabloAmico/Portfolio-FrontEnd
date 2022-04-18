@@ -4,4 +4,12 @@
     height: 60px;
     display: flex;
     height: 60px;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.Contact{
+    display: flex;
+    justify-content:end;
+    width: 80%;
 }

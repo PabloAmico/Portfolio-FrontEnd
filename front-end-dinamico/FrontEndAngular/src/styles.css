@@ -1,9 +1,21 @@
 body{
     margin-top: 0px;
-    display: flexbox;
+    /* display: flexbox; */
+    background-color: grey;
 }
 
 .container{
     max-width: 960px;
     margin: auto;
+}
+
+.Button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (max-width:580px) {
+    .Button{
+        scale: 0.8;
+    }
 }

@@ -1,0 +1,12 @@
+.container-Banner{
+    max-width: 960px;
+    max-height: 676px;
+    margin: auto;
+    margin-top: 5px;
+    /* width: 100%; */
+}
+
+.Banner{
+    max-width: 960px;
+    border-radius: 20px;
+}
