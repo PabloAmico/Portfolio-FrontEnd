@@ -10,6 +10,10 @@ import { ButtonLoginComponent } from './components/button-login/button-login.com
 import { BannerComponent } from './components/banner/banner.component';
 import { FotoPerfilComponent } from './components/foto-perfil/foto-perfil.component';
 import { BotonMenuComponent } from './components/boton-menu/boton-menu.component';
+import { BodyComponent } from './components/body/body.component';
+import { TitlesComponent } from './components/titles/titles.component';
+import { InformationComponent } from './components/information/information.component';
+import { GraphicComponent } from './components/graphic/graphic.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { BotonMenuComponent } from './components/boton-menu/boton-menu.component
     ButtonLoginComponent,
     BannerComponent,
     FotoPerfilComponent,
-    BotonMenuComponent
+    BotonMenuComponent,
+    BodyComponent,
+    TitlesComponent,
+    InformationComponent,
+    GraphicComponent
   ],
   imports: [
     BrowserModule,

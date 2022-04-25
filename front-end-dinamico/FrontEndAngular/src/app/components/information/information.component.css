@@ -1,0 +1,21 @@
+.Information{
+    display: flex;
+    align-items: center;
+}
+
+.image-container{
+    /* margin-right: 5%; */
+    width: 150px;
+    display: flex;
+    
+}
+
+.image{
+    margin: auto;
+}
+
+.Text{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
+}
