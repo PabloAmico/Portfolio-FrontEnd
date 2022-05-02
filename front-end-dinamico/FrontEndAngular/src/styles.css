@@ -1,7 +1,9 @@
 body{
     margin-top: 0px;
     /* display: flexbox; */
-    background-color: grey;
+    background-color: #B9D7EA;
+    font-size: small;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .container{

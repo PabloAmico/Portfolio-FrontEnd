@@ -14,6 +14,7 @@ import { BodyComponent } from './components/body/body.component';
 import { TitlesComponent } from './components/titles/titles.component';
 import { InformationComponent } from './components/information/information.component';
 import { GraphicComponent } from './components/graphic/graphic.component';
+import { BarSkillsComponent } from './components/bar-skills/bar-skills.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { GraphicComponent } from './components/graphic/graphic.component';
     BodyComponent,
     TitlesComponent,
     InformationComponent,
-    GraphicComponent
+    GraphicComponent,
+    BarSkillsComponent
   ],
   imports: [
     BrowserModule,

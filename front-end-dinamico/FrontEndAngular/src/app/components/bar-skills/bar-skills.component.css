@@ -1,0 +1,12 @@
+.Bar{
+    margin: auto;
+    max-width: 520px;
+    border-top-style: solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Number{
+
+}

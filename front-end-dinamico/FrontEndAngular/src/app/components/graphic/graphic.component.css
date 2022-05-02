@@ -1,0 +1,30 @@
+:root{
+    --hoverWidth: 75%;
+}
+
+.Skills-bar{
+    margin-bottom: 0.5em;
+}
+
+
+.grafico {
+    position: relative; /* IE is dumb */
+    width: 500px;
+    border: 1px solid #11324D;
+    padding: 2px;
+    margin: auto;
+}
+.grafico .barra {
+   display: block;
+   position: relative;
+   background: #11324D;
+   text-align: center;
+   color: #fff;
+   height: 2em;
+   line-height: 2em;
+   /* width: var(--hoverWidth); */
+   
+}
+.grafico .barra span {
+   position: absolute; left: 1em;
+}

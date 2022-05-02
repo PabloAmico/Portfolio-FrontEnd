@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-graphic',
@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class GraphicComponent implements OnInit {
 
   constructor() { }
+
+  @Input() percentage:string = "";
+  @Input() name:string = "";
+
+  
 
   ngOnInit(): void {
   }
