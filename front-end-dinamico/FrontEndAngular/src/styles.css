@@ -3,7 +3,8 @@ body{
     /* display: flexbox; */
     background-color: #B9D7EA;
     font-size: small;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .container{
@@ -20,4 +21,6 @@ body{
     .Button{
         scale: 0.8;
     }
+   
 }
+

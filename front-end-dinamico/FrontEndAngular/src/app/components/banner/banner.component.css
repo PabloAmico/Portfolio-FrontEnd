@@ -1,5 +1,5 @@
 .container-Banner{
-    max-width: 960px;
+    max-width: 920px;
     max-height: 676px;
     margin: auto;
     margin-top: 5px;
@@ -7,6 +7,26 @@
 }
 
 .Banner{
-    max-width: 960px;
+    max-width: 920px;
     border-radius: 20px;
+}
+
+@media (max-width:920px){
+    .Banner{
+       width: auto;
+       flex: auto;
+       min-width: 360px
+       
+       /* max-height: 100%; */
+        /* object-fit: contain; */
+        /* height: fit-content; */
+    }
+
+    .container-Banner{
+        /* width: auto;  */
+        margin: auto;
+        display: flex;
+        margin-top: 1%;
+        /* height: fit-content; */
+    }
 }

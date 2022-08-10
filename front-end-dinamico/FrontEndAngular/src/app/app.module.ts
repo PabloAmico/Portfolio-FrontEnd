@@ -15,6 +15,12 @@ import { TitlesComponent } from './components/titles/titles.component';
 import { InformationComponent } from './components/information/information.component';
 import { GraphicComponent } from './components/graphic/graphic.component';
 import { BarSkillsComponent } from './components/bar-skills/bar-skills.component';
+import { InitSesionComponent } from './components/init-sesion/init-sesion.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SaveChangesButtonComponent } from './components/save-changes-button/save-changes-button.component';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +36,17 @@ import { BarSkillsComponent } from './components/bar-skills/bar-skills.component
     TitlesComponent,
     InformationComponent,
     GraphicComponent,
-    BarSkillsComponent
+    BarSkillsComponent,
+    InitSesionComponent,
+    PortfolioComponent,
+    SaveChangesButtonComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

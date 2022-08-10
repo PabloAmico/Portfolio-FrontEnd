@@ -13,6 +13,7 @@
     /* margin-bottom: 50%; */
     display: flex;
     margin-bottom: 10px;
+    margin-top: 1%;
 }
 
 .foto-Perfil{
@@ -24,13 +25,31 @@
 
 .Descripcion{
     display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
+     margin-top: 20%; 
+    /* margin-bottom: auto;  */
     text-align: center;
+    align-items: center;
     max-width: 960px;
     min-width: 960px;
 }
 
 .Text{
     text-align: center;
+    margin-top: 5%;
+}
+
+@media (max-width:580px){
+    .container-perfil{
+        margin-top: 1%;
+        margin: auto;
+        display: flex;
+        /* min-width: 360px; */
+    }
+
+    .container-foto{
+        width: auto;
+       flex: auto;
+      scale: 0.9;
+      margin-right: 5%;
+    }
 }
