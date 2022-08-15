@@ -38,6 +38,15 @@
     margin-top: 5%;
 }
 
+.Name{
+    display:flex;
+    align-items: center;
+}
+
+.Form{
+    display: flex;
+}
+
 @media (max-width:580px){
     .container-perfil{
         margin-top: 1%;

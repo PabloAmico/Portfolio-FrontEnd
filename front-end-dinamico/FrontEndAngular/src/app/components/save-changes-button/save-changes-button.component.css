@@ -1,0 +1,9 @@
+#button{
+    /* display: none; */
+    width: 3rem;
+    height: 3rem;
+    border-style: none;
+    border-radius: 50%;
+    color: #1E4E59;
+    background-color: #79D9AC;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-save-changes-button',
@@ -9,7 +9,11 @@ export class SaveChangesButtonComponent implements OnInit {
 
   constructor() { }
 
+  Image:string = './assets/images/save_icon.png';
+  @Input() Link:string = "";
+  edicion:boolean = false;
   ngOnInit(): void {
   }
 
 }
+

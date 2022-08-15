@@ -20,6 +20,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SaveChangesButtonComponent } from './components/save-changes-button/save-changes-button.component';
+import { EditButtonComponent } from './components/edit-button/edit-button.component';
+import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { SaveChangesButtonComponent } from './components/save-changes-button/sav
     InitSesionComponent,
     PortfolioComponent,
     SaveChangesButtonComponent,
+    EditButtonComponent,
+    CancelButtonComponent,
   
   ],
   imports: [
@@ -47,7 +51,9 @@ import { SaveChangesButtonComponent } from './components/save-changes-button/sav
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule
+   
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
