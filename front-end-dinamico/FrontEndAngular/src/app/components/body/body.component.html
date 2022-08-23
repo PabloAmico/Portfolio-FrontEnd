@@ -1,7 +1,11 @@
 <div>
     <app-titles Title="Experiencia"></app-titles>
     <div>
-        <app-information Image="./assets/images/ATEM.png" Title="Atención al Público" Description="Asociación Trabajadores del Estado Mutual" Time="Septiembre 2013 - Actualidad"></app-information>
+        <ul>
+            <li class="lista" *ngFor="let exp of miExperiencia">
+                <app-information Image="./assets/images/ATEM.png" Title={{exp.nombre_empresa}} Description={{exp.descripcion}} Time={{exp.fecha_inicio}}{{exp.fecha_fin}}></app-information>
+            </li> 
+        </ul>
     </div>
     <app-titles Title="Educación"></app-titles>
     <div>
