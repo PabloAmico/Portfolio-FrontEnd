@@ -4,20 +4,23 @@
     </div>
     
     <div class="Descipcion">
-        
-        <div class="Name"><h2 class="Text"><strong>{{Nombre}}</strong></h2><app-edit-button (click)="modo_edicion($event)" ></app-edit-button></div>
+        <div class="NameContainer">
+            <div class="Name"><h2 class="Text"><strong>{{miPortfolio.nombre}} {{miPortfolio.apellido}}</strong></h2></div>
+            <app-edit-button (click)="modo_edicion($event)" ></app-edit-button>
+        </div>
         <div>
             <h4 class="Text">{{Puesto_1}}</h4>
-            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div>
+            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form></div>
         </div>
         <div>
             <h4 class="Text">{{Puesto_2}}</h4>
-            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div>
+            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form></div>
         </div>
         <div>
-            <h4 class="Text">{{Localidad}}</h4>
-            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div>
+            <h4 class="Text">{{miPortfolio.ciudad}}</h4>
+            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><div>
         </div>
+        <app-save-changes-button></app-save-changes-button>
     </div>
     
     

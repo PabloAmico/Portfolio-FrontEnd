@@ -12,7 +12,7 @@ export class EditButtonComponent implements OnInit {
   ImageEdit:string = './assets/images/edit_icon.png';
   Image:string = this.ImageEdit;
   @Input() buttonConfig: any;
-  edicion:boolean = false;
+  edicion:boolean = true;
   ngOnInit(): void {
     
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 // import { debug } from 'console';
 import { SaveChangesButtonComponent } from '../save-changes-button/save-changes-button.component';
 
@@ -9,17 +10,22 @@ import { SaveChangesButtonComponent } from '../save-changes-button/save-changes-
 })
 export class FotoPerfilComponent implements OnInit {
 
-  
-  constructor() { }
+  miPortfolio:any;
+  constructor(private datosPortfolio:PortfolioService) { }
   id:number = 1;
   mostrar = false;
-  edicion = true;
+  edicion = false;
   url:string = './assets/images/foto-escalada.png';
   Nombre:string = 'Amico Pablo Andres';
   Puesto_1:string = 'Full Stack Developer Jr.';
   Puesto_2:string = 'Game Developer';
   Localidad:string = 'Santa Fe, Argentina';
   ngOnInit(): void {
+    this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
+      // console.log(data);
+      this.miPortfolio=data[0];
+      console.log(this.miPortfolio.nombre);
+    });
     this.revisar();
   }
 
