@@ -1,0 +1,18 @@
+<div class="contenedor">
+
+    <form [formGroup]="form" (ngSubmit)="save($event)">
+        <p>
+            Empresa: <input type="text" formControlName="nombre_empresa"><br/>
+            descripcion: <input type="text" formControlName="descripcion"><br/>
+            Fecha_inicio: <input type="text" formControlName="fecha_inicio"><br/>
+            Fecha_fin : <input type="text" formControlName="fecha_fin"><br/>
+            <button type="submit">Guardar</button>
+        </p>
+        <p>
+            
+        </p>
+
+    </form>
+</div>
+
+<!-- actualizar api para recibir solo valores de letras y por separado obtener las imagenes -->

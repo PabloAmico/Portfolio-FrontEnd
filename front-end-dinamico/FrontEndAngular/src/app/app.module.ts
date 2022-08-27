@@ -22,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { SaveChangesButtonComponent } from './components/save-changes-button/save-changes-button.component';
 import { EditButtonComponent } from './components/edit-button/edit-button.component';
 import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
+import { FormExperienciaComponent } from './components/form-experiencia/form-experiencia.component';
+
+
 
 
 @NgModule({
@@ -44,7 +47,7 @@ import { CancelButtonComponent } from './components/cancel-button/cancel-button.
     SaveChangesButtonComponent,
     EditButtonComponent,
     CancelButtonComponent,
-  
+    FormExperienciaComponent,
   ],
   imports: [
     BrowserModule,

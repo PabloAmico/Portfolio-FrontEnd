@@ -1,6 +1,13 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+  'Content-Type': 'application/json',
+  //Authorization: 'my-auth-token'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +32,26 @@ export class PortfolioService {
   obtenerDatosEducacion(id:any):Observable<any>{
     return this.http.get(this.url + "/ver/educacion/" + id);
   }
+
+  obtenerDatosCursos(id:any):Observable<any>{
+    return this.http.get(this.url + "/ver/cursos/" + id);
+  }
+
+  obtenerDatosSkills(id:any):Observable<any>{
+    return this.http.get(this.url + "/ver/skills/" + id);
+  }
+
+  obtenerDatosRoles(id:any):Observable<any>{
+    return this.http.get(this.url + "/ver/rol/" + id);
+  }
+
+  actualizarDatosExperienciaSinFoto(id_person:any,id_obj:any,nombre:any,descripcion:any,fecha_inicio:any,fecha_fin:any){
+    this.http.get(this.url + "/actualizar/experiencia/sinfoto/"+id_person+"/"+id_obj+"/"+nombre+"/"+descripcion+"/"+fecha_inicio+"/"+fecha_fin);
+  }
+
+  actualizarDatosExperiencia(obj:any, id:any):Observable<any>{
+    console.log(this.url+"/actualizar/experiencia/"+id);
+    console.log(obj);
+    return this.http.post(this.url+"/actualizar/experiencia/"+id,obj, httpOptions);
+  } 
 }

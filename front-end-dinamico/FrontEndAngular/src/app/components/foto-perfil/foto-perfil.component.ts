@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
-// import { debug } from 'console';
-import { SaveChangesButtonComponent } from '../save-changes-button/save-changes-button.component';
+
 
 @Component({
   selector: 'app-foto-perfil',
@@ -11,8 +10,9 @@ import { SaveChangesButtonComponent } from '../save-changes-button/save-changes-
 export class FotoPerfilComponent implements OnInit {
 
   miPortfolio:any;
+  miRoles:any;
   constructor(private datosPortfolio:PortfolioService) { }
-  id:number = 1;
+  id:number = 0;
   mostrar = false;
   edicion = false;
   url:string = './assets/images/foto-escalada.png';
@@ -24,14 +24,21 @@ export class FotoPerfilComponent implements OnInit {
     this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
       // console.log(data);
       this.miPortfolio=data[0];
-      console.log(this.miPortfolio.nombre);
+      this.id = this.miPortfolio.id;
+      //console.log(this.miPortfolio.nombre);
+      this.datosPortfolio.obtenerDatosRoles(this.id).subscribe(data =>{
+        this.miRoles = data;
+        console.log(this.miRoles);
+      })
     });
+
+   
     this.revisar();
   }
 
   modo_edicion(event:any){
     
-    
+    console.log(this.id);
     if(!this.edicion){
       console.log("edicion true");
       this.edicion = true;

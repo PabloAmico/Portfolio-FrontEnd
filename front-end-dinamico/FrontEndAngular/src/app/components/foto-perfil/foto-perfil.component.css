@@ -23,22 +23,34 @@
    
 }
 
+.ciudad{
+   text-align: center;
+   margin:auto;
+}
+
+.lista{
+    list-style: none;
+}
+
 .Descripcion{
     display: flex;
      margin-top: 20%; 
     /* margin-bottom: auto;  */
-    text-align: center;
-    align-items: center;
-    max-width: 960px;
-    min-width: 960px;
+    text-align:start;
+    align-items:center;
+    max-width: 600px;
+    min-width: 600px;
 }
 
 .Text{
-    text-align: center;
+    text-align: start;
     margin-top: 5%;
+    margin-left: auto;
 }
 .NameContainer{
     display: flex;
+    width: auto;
+    margin-left: 10%;
 }
 
 .Name{

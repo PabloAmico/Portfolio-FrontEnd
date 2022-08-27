@@ -9,18 +9,24 @@
             <app-edit-button (click)="modo_edicion($event)" ></app-edit-button>
         </div>
         <div>
-            <h4 class="Text">{{Puesto_1}}</h4>
-            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form></div>
+            <ul>
+                <li class="lista" *ngFor="let rol of miRoles">
+                    <h4 class="Text">{{rol.nombre_rol}}</h4>
+                    <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div>
+                    
+                </li>
+                
+            </ul>
+            
         </div>
-        <div>
-            <h4 class="Text">{{Puesto_2}}</h4>
-            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form></div>
+        
+        <div class="ciudad">
+            <ul>
+                <h4 class="Text">{{miPortfolio.ciudad}}</h4>
+                <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div>
+            </ul>
         </div>
-        <div>
-            <h4 class="Text">{{miPortfolio.ciudad}}</h4>
-            <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><div>
-        </div>
-        <app-save-changes-button></app-save-changes-button>
+        
     </div>
     
     

@@ -3,39 +3,37 @@
     <div>
         <ul>
             <li class="lista" *ngFor="let exp of miExperiencia">
-                <app-information Image="./assets/images/ATEM.png" Title={{exp.nombre_empresa}} Description={{exp.descripcion}} Time={{exp.fecha_inicio}}{{exp.fecha_fin}}></app-information>
+              <div class="prueba">  <app-information Image="./assets/images/ATEM.png" Title={{exp.nombre_empresa}} Description={{exp.descripcion}} Time="{{exp.fecha_inicio}} - {{exp.fecha_fin}}"></app-information><app-form-experiencia [id_obj]="exp.id" [id_per]="miPortfolio.id"></app-form-experiencia></div>
             </li> 
         </ul>
     </div>
     <app-titles Title="Educación"></app-titles>
     <div>
-        <app-information Image="./assets/images/FICH-logo.png" Title="Facultad de Ingeniería y Ciencias Hídricas (FICH-UNL)" Description="Técnicatura en Diseño y Programación de Videojuegos" Time="2018 - en curso / 3 materias pendientes de aprobación"></app-information>
-    </div>
-    <div>
-        <app-information Image="./assets/images/FICH-logo.png" Title="Facultad de Ingeniería y Ciencias Hídricas (FICH-UNL)" Description="Ingeniería en Informática" Time="2018 - en curso"></app-information>
-    </div>
-    <div>
-        <app-information Image="./assets/images/EET478.png" Title="E.E.T N°478 Dr. Nicolás Avellaneda" Description="Educación Polimodal - Producción de Bienes y Servicios" Time="2006 - 2011"></app-information>
+        <ul>
+            <li class="lista" *ngFor="let edu of miEducacion">
+                <app-information Image="./assets/images/FICH-logo.png" Title="{{edu.institucion}}" Description="{{edu.descripcion}}" Time="{{edu.fecha_inicio}} - {{edu.fecha_fin}}"></app-information>
+            </li>
+        </ul>
     </div>
     <div>
         <app-titles Title="Cursos"></app-titles>
     </div>
     <div>
-        <app-information Image="./assets/images/logo-ArgentinaPrograma.png" Title="Argentina Programa" Description="#Yo Programo" Time="Febrero 2022 - Agosto 2022"></app-information>
-    </div>
-    <div>
-        <app-information Image="./assets/images/logo-ArgentinaPrograma.png" Title="Argentina Programa" Description="#Se Programar" Time="Agosto 2021 - Octubre 2021"></app-information>
+        <ul>
+            <li class="lista" *ngFor="let cur of miCurso">
+                <app-information Image="./assets/images/logo-ArgentinaPrograma.png" Title="{{cur.nombre}}" Description="{{cur.descripcion}}" Time="{{cur.fecha_inicio}} - {{cur.fecha_final}}"></app-information>
+            </li>
+        </ul>
     </div>
 
     <div>
         <app-titles Title="Hard Skills & Soft Skills"></app-titles>
         <div>
-            <app-graphic name="C++" percentage="75"></app-graphic>
-            <app-graphic name="C#" percentage="60"></app-graphic>
-            <app-graphic name="Typescript" percentage="50"></app-graphic>
-            <app-graphic name="Bases De Datos" percentage="50"></app-graphic>
-            <app-graphic name="HTML" percentage="40"></app-graphic>
-            <app-graphic name="CSS" percentage="25"></app-graphic>
+            <ul>
+                <li class="lista" *ngFor="let sk of miSkill">
+                    <app-graphic name="{{sk.nombre_tecnologia}}" percentage="{{sk.habilidad_tecnologica}}"></app-graphic>
+                </li>
+            </ul>
             <div>
                 <app-bar-skills></app-bar-skills>
             </div>
