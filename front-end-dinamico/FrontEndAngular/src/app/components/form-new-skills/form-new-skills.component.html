@@ -1,0 +1,16 @@
+<div class="contenedor">
+
+    <h3>Agregar Skill</h3>
+
+    <form [formGroup]="form" (ngSubmit)="save($event)">
+        <p>
+            nombre: <input type="text" formControlName="nombre_tecnologia"><br/>
+            habilidad : <input type="text" formControlName="habilidad_tecnologica"><br/>
+            <button type="submit">Guardar</button>
+        </p>
+        <p>
+            
+        </p>
+
+    </form>
+</div>

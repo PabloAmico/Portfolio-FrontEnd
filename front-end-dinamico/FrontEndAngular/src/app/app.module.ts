@@ -23,6 +23,18 @@ import { SaveChangesButtonComponent } from './components/save-changes-button/sav
 import { EditButtonComponent } from './components/edit-button/edit-button.component';
 import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
 import { FormExperienciaComponent } from './components/form-experiencia/form-experiencia.component';
+import { ReloadDirective } from './directives/reload.directive';
+import { FormNewExperienciaComponent } from './components/form-new-experiencia/form-new-experiencia.component';
+import { NewButtonComponent } from './components/new-button/new-button.component';
+import { FormUpdateEducacionComponent } from './components/form-update-educacion/form-update-educacion.component';
+import { FormNewEducacionComponent } from './components/form-new-educacion/form-new-educacion.component';
+import { FormNewCursoComponent } from './components/form-new-curso/form-new-curso.component';
+import { FormUpdateCursoComponent } from './components/form-update-curso/form-update-curso.component';
+import { FormUpdateSkillsComponent } from './components/form-update-skills/form-update-skills.component';
+import { FormNewSkillsComponent } from './components/form-new-skills/form-new-skills.component';
+import { FormUpdateSobremiComponent } from './components/form-update-sobremi/form-update-sobremi.component';
+import { FormUpdateRolComponent } from './components/form-update-rol/form-update-rol.component';
+import { FormNewRolComponent } from './components/form-new-rol/form-new-rol.component';
 
 
 
@@ -48,6 +60,18 @@ import { FormExperienciaComponent } from './components/form-experiencia/form-exp
     EditButtonComponent,
     CancelButtonComponent,
     FormExperienciaComponent,
+    ReloadDirective,
+    FormNewExperienciaComponent,
+    NewButtonComponent,
+    FormUpdateEducacionComponent,
+    FormNewEducacionComponent,
+    FormNewCursoComponent,
+    FormUpdateCursoComponent,
+    FormUpdateSkillsComponent,
+    FormNewSkillsComponent,
+    FormUpdateSobremiComponent,
+    FormUpdateRolComponent,
+    FormNewRolComponent,
   ],
   imports: [
     BrowserModule,

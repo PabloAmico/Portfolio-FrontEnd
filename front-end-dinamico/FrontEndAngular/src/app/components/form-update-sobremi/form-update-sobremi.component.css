@@ -1,0 +1,28 @@
+.form{
+    width: 800px;
+    margin-left: 3%;
+}
+
+
+.contenedor{
+    width: 850px;
+    height: 100px;
+    margin-left: 5%;
+    align-items: center;
+    background-color: #769FCD;
+    margin: 5%;
+   
+}
+
+.part_form{
+    justify-content: end;
+    margin-left: 5%;
+}
+
+.title{
+    text-align: center;
+}
+
+.button{
+   margin-left: 45%;
+}

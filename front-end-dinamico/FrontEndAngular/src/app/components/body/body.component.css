@@ -6,3 +6,19 @@
     display: flex;
     width: auto;
 }
+
+.container{
+    display: flex;
+    width: auto;
+    
+}
+
+.container_form{
+    height: 100%;;
+}
+
+.container-skills{
+    /* margin-left: 20%; */
+    display: flex;
+    justify-content: center;
+}

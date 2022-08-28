@@ -45,13 +45,67 @@ export class PortfolioService {
     return this.http.get(this.url + "/ver/rol/" + id);
   }
 
-  actualizarDatosExperienciaSinFoto(id_person:any,id_obj:any,nombre:any,descripcion:any,fecha_inicio:any,fecha_fin:any){
+  /*actualizarDatosExperienciaSinFoto(id_person:any,id_obj:any,nombre:any,descripcion:any,fecha_inicio:any,fecha_fin:any){
     this.http.get(this.url + "/actualizar/experiencia/sinfoto/"+id_person+"/"+id_obj+"/"+nombre+"/"+descripcion+"/"+fecha_inicio+"/"+fecha_fin);
-  }
+  }*/
 
   actualizarDatosExperiencia(obj:any, id:any):Observable<any>{
     console.log(this.url+"/actualizar/experiencia/"+id);
     console.log(obj);
     return this.http.post(this.url+"/actualizar/experiencia/"+id,obj, httpOptions);
   } 
+
+  nuevaExperienciaLaboral(obj:any, id:any):Observable<any>{
+    return this.http.post(this.url+"/new/experiencia/"+id,obj, httpOptions);
+  }
+
+  actualizarDatosEducacion(obj:any, id:any):Observable<any>{
+    console.log(this.url+"/actualizar/experiencia/"+id);
+    console.log(obj);
+    return this.http.post(this.url+"/actualizar/educacion/"+id,obj, httpOptions);
+  } 
+
+  nuevaEducacion(obj:any, id:any):Observable<any>{
+    return this.http.post(this.url+"/new/educacion/"+id,obj, httpOptions);
+  }
+
+  actualizarDatosCursos(obj:any, id:any):Observable<any>{
+    console.log(this.url+"/actualizar/experiencia/"+id);
+    console.log(obj);
+    return this.http.post(this.url+"/actualizar/curso/"+id,obj, httpOptions);
+  } 
+
+  nuevoCurso(obj:any, id:any):Observable<any>{
+    return this.http.post(this.url+"/new/cursos/"+id,obj, httpOptions);
+  }
+
+  actualizarDatosSkills(obj:any, id:any):Observable<any>{
+    console.log(this.url+"/actualizar/experiencia/"+id);
+    console.log(obj);
+    return this.http.post(this.url+"/actualizar/skills/"+id,obj, httpOptions);
+  } 
+
+  nuevaSkills(obj:any, id:any):Observable<any>{
+    return this.http.post(this.url+"/new/skills/"+id,obj, httpOptions);
+  }
+
+
+  actualizarDatosSobreMi(obj:any):Observable<any>{
+    return this.http.post(this.url+"/actualizar/persona/sobremi",obj, httpOptions);
+  }
+
+
+  actualizarDatosRol(obj:any, id:any):Observable<any>{
+    console.log(this.url+"/actualizar/experiencia/"+id);
+    console.log(obj);
+    return this.http.post(this.url+"/actualizar/rol/"+id,obj, httpOptions);
+  } 
+
+  nuevoRol(obj:any, id:any):Observable<any>{
+    return this.http.post(this.url+"/new/rol/"+id,obj, httpOptions);
+  }
+
+  deleteDato(id:any, path:string):Observable<any>{
+    return this.http.delete(this.url+"/delete/"+path+"/"+id, httpOptions);
+  }
 }

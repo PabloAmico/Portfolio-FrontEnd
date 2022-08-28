@@ -38,8 +38,8 @@
     /* margin-bottom: auto;  */
     text-align:start;
     align-items:center;
-    max-width: 600px;
-    min-width: 600px;
+    max-width: 960px;
+    min-width: 960px;
 }
 
 .Text{
@@ -49,18 +49,36 @@
 }
 .NameContainer{
     display: flex;
-    width: auto;
+    width: 100%;
     margin-left: 10%;
 }
 
 .Name{
-    display:block;
+    display:flex;
     margin: auto;
     align-items: center;
 }
 
 .Form{
     display: flex;
+}
+
+.container_full_sobre_mi{
+    border-bottom-style: double;
+    border-bottom-color: black;
+}
+
+.sobre_mi_conteiner{
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.sobre_mi_title{
+   margin: auto;
+   display: flex;
 }
 
 @media (max-width:580px){

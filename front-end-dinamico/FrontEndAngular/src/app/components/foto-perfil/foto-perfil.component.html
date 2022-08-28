@@ -5,17 +5,19 @@
     
     <div class="Descipcion">
         <div class="NameContainer">
-            <div class="Name"><h2 class="Text"><strong>{{miPortfolio.nombre}} {{miPortfolio.apellido}}</strong></h2></div>
-            <app-edit-button (click)="modo_edicion($event)" ></app-edit-button>
+            <div class="Name"><h2 class="Text"><strong>{{miPortfolio.nombre}} {{miPortfolio.apellido}}</strong></h2>
+                <app-edit-button *ngIf="!mostrar_nueva_rol" (click)="modo_edicion_rol($event)" ></app-edit-button><app-new-button *ngIf="!mostrar_edicion_rol"  (click)="modo_nueva_rol($event)"></app-new-button>
+            </div>
+            
         </div>
         <div>
             <ul>
                 <li class="lista" *ngFor="let rol of miRoles">
                     <h4 class="Text">{{rol.nombre_rol}}</h4>
-                    <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div>
-                    
+                    <!-- <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div> -->
+                    <div class="container-form"><app-form-update-rol *ngIf="mostrar_edicion_rol" [id_obj]="rol.id" [id_per]="miPortfolio.id"></app-form-update-rol></div>
                 </li>
-                
+                <div class="container-form"><app-form-new-rol *ngIf="mostrar_nueva_rol" [id_per]="miPortfolio.id"></app-form-new-rol></div>
             </ul>
             
         </div>
@@ -30,4 +32,13 @@
     </div>
     
     
+</div>
+<div class="container_full_sobre_mi">
+<div class="sobre_mi_conteiner">
+    
+   <div class="sobre_mi_title"> <h3>Sobre mi</h3><app-edit-button *ngIf="!mostrar_nueva_sobremi" (click)="modo_edicion_sobremi($event)" ></app-edit-button></div>
+   
+</div>
+<div><h5>{{miPortfolio.sobre_mi}}</h5></div>
+<div class="container-form"><app-form-update-sobremi *ngIf="mostrar_edicion_sobremi" [id_per]="miPortfolio.id"></app-form-update-sobremi></div>
 </div>

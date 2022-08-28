@@ -1,10 +1,10 @@
 <div class="contenedor">
 
-    <h3>Actualizar Experiencia</h3>
+    <h3>Actualizar Educación</h3>
 
     <form [formGroup]="form" (ngSubmit)="save($event)">
         <p>
-            Empresa: <input type="text" formControlName="nombre_empresa"><br/>
+            institucion: <input type="text" formControlName="institucion"><br/>
             descripcion: <input type="text" formControlName="descripcion"><br/>
             Fecha_inicio: <input type="text" formControlName="fecha_inicio"><br/>
             Fecha_fin : <input type="text" formControlName="fecha_fin"><br/>
@@ -16,5 +16,3 @@
 
     </form>
 </div>
-
-<!-- actualizar api para recibir solo valores de letras y por separado obtener las imagenes -->
