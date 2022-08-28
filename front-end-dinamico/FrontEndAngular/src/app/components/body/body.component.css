@@ -22,3 +22,13 @@
     display: flex;
     justify-content: center;
 }
+
+.graphic{
+    display: flex;
+    margin-right: 3%;
+    justify-content: center;
+}
+
+.delete_skill{
+    display: flex;
+}

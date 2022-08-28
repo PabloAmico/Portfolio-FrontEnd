@@ -1,0 +1,10 @@
+.button{
+    background-color: transparent;
+    /* border-radius: 50%; */
+    border-style:hidden;
+    margin: 5%;
+}
+
+.container{
+    margin-top: 20%;
+}

@@ -12,10 +12,10 @@
         </div>
         <div>
             <ul>
-                <li class="lista" *ngFor="let rol of miRoles">
-                    <h4 class="Text">{{rol.nombre_rol}}</h4>
+                <li class="lista" *ngFor="let roles of miRoles">
+                    <div class="delete"><h4 class="Text">{{roles.nombre_rol}}</h4><app-delete-button *ngIf="mostrar_edicion_rol" [id]="roles.id" [path]="'rol'"></app-delete-button></div>
                     <!-- <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div> -->
-                    <div class="container-form"><app-form-update-rol *ngIf="mostrar_edicion_rol" [id_obj]="rol.id" [id_per]="miPortfolio.id"></app-form-update-rol></div>
+                    <div class="container-form"><app-form-update-rol *ngIf="mostrar_edicion_rol" [id_obj]="roles.id" [id_per]="miPortfolio.id"></app-form-update-rol></div>
                 </li>
                 <div class="container-form"><app-form-new-rol *ngIf="mostrar_nueva_rol" [id_per]="miPortfolio.id"></app-form-new-rol></div>
             </ul>
@@ -30,8 +30,6 @@
         </div>
         
     </div>
-    
-    
 </div>
 <div class="container_full_sobre_mi">
 <div class="sobre_mi_conteiner">

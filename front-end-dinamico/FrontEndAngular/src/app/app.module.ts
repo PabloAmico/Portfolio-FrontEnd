@@ -21,7 +21,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SaveChangesButtonComponent } from './components/save-changes-button/save-changes-button.component';
 import { EditButtonComponent } from './components/edit-button/edit-button.component';
-import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
 import { FormExperienciaComponent } from './components/form-experiencia/form-experiencia.component';
 import { ReloadDirective } from './directives/reload.directive';
 import { FormNewExperienciaComponent } from './components/form-new-experiencia/form-new-experiencia.component';
@@ -35,6 +34,7 @@ import { FormNewSkillsComponent } from './components/form-new-skills/form-new-sk
 import { FormUpdateSobremiComponent } from './components/form-update-sobremi/form-update-sobremi.component';
 import { FormUpdateRolComponent } from './components/form-update-rol/form-update-rol.component';
 import { FormNewRolComponent } from './components/form-new-rol/form-new-rol.component';
+import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 
 
 
@@ -58,7 +58,7 @@ import { FormNewRolComponent } from './components/form-new-rol/form-new-rol.comp
     PortfolioComponent,
     SaveChangesButtonComponent,
     EditButtonComponent,
-    CancelButtonComponent,
+  
     FormExperienciaComponent,
     ReloadDirective,
     FormNewExperienciaComponent,
@@ -72,6 +72,7 @@ import { FormNewRolComponent } from './components/form-new-rol/form-new-rol.comp
     FormUpdateSobremiComponent,
     FormUpdateRolComponent,
     FormNewRolComponent,
+    DeleteButtonComponent,
   ],
   imports: [
     BrowserModule,
