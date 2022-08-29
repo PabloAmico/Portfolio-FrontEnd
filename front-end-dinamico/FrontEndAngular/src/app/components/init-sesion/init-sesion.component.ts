@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validator } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -9,10 +11,12 @@ import { FormBuilder, FormGroup, Validator } from '@angular/forms';
 })
 export class InitSesionComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder) { 
-    this.form = this.formBuilder.group(
+  constructor(private userService:UserService,
+              private router:Router) { 
+    this.form = new FormGroup(
       {
-
+        email: new FormControl('', [Validators.required]),
+        password: new FormControl('', [Validators.required]),
       }
     )
     
@@ -21,4 +25,13 @@ export class InitSesionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    this.userService.login(this.form.value)
+    .then(response =>{
+      console.log(response);
+      this.router.navigate(['/portfolio']);
+    })
+    .catch(error => console.log(error));
+   
+  }
 }

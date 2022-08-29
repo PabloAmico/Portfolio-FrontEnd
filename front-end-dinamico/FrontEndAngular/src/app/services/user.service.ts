@@ -10,7 +10,7 @@ export class UserService {
 
   }
 
-  login({email,password}: any){
+ login({email,password}: any){
     return signInWithEmailAndPassword(this.auth,email,password);
   }
 

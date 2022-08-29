@@ -35,6 +35,9 @@ import { FormUpdateSobremiComponent } from './components/form-update-sobremi/for
 import { FormUpdateRolComponent } from './components/form-update-rol/form-update-rol.component';
 import { FormNewRolComponent } from './components/form-new-rol/form-new-rol.component';
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 
@@ -78,7 +81,9 @@ import { DeleteButtonComponent } from './components/delete-button/delete-button.
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
    
   ],
   

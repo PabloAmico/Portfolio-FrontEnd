@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-b7fa7": {
+      "hosting": {
+        "FrontEndAngular": [
+          "portfolio-b7fa7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-b7fa7"
+  }
+}
