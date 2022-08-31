@@ -45,6 +45,7 @@ import { UploadImageExperienciaComponent } from './components/upload-image-exper
 import { ButtonContactoComponent } from './components/button-contacto/button-contacto.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { FormUpdateContactoComponent } from './components/form-update-contacto/form-update-contacto.component';
+import { VistaPreviaComponent } from './components/vista-previa/vista-previa.component';
 
 
 
@@ -89,6 +90,7 @@ import { FormUpdateContactoComponent } from './components/form-update-contacto/f
     ButtonContactoComponent,
     ContactoComponent,
     FormUpdateContactoComponent,
+    VistaPreviaComponent,
   ],
   imports: [
     BrowserModule,

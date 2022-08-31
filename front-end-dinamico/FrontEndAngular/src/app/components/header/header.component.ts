@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -11,8 +11,9 @@ export class HeaderComponent implements OnInit {
   id:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
-  
+  @Input() portfolio:boolean = true;
 
+ 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
       // console.log(data);

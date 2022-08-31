@@ -10,6 +10,8 @@ export class UploadImagePerfilComponent implements OnInit {
 
   @Input() id:any;
 
+  @Input() portfolio:boolean = false;
+
   persona = {
     id : '',
     nombre : '',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -7,6 +7,11 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
+
+
+
+  @Input() portfolio:boolean = false;
+
 
   //atributos para ver y ocultar los botones de carga y actualizacion.
   mostrar_edicion_experiencia = false;

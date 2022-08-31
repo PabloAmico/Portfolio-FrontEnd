@@ -9,6 +9,8 @@ export class InformationComponent implements OnInit {
 
   constructor() { }
 
+ @Input() portfolio:boolean =true;
+
   @Input() Image:string = "";
   @Input() Title:string = "";
   @Input() Description:string = "";

@@ -1,22 +1,22 @@
 <div class="container-perfil">
     <div class="container-foto">
         <img src={{miPortfolio.imagen_perfil}} alt="" class="foto-Perfil">
-       <div class="button-upload-perfil"> <app-upload-image-perfil [id]="miPortfolio.id"></app-upload-image-perfil></div>
+       <div class="button-upload-perfil"> <app-upload-image-perfil *ngIf="portfolio" [id]="miPortfolio.id"></app-upload-image-perfil></div>
     </div>
     
     <div class="Descipcion">
         <div class="NameContainer">
             <div class="Name"><h2 class="Text"><strong>{{miPortfolio.nombre}} {{miPortfolio.apellido}}</strong></h2>
-                <app-edit-button *ngIf="!mostrar_nueva_rol" (click)="modo_edicion_rol($event)" ></app-edit-button><app-new-button *ngIf="!mostrar_edicion_rol"  (click)="modo_nueva_rol($event)"></app-new-button>
+                <app-edit-button  *ngIf="!mostrar_nueva_rol && portfolio" (click)="modo_edicion_rol($event)" ></app-edit-button><app-new-button *ngIf="!mostrar_edicion_rol && portfolio"  (click)="modo_nueva_rol($event)"></app-new-button>
             </div>
             
         </div>
         <div>
             <ul>
                 <li class="lista" *ngFor="let roles of miRoles">
-                    <div class="delete"><h4 class="Text">{{roles.nombre_rol}}</h4><app-delete-button *ngIf="mostrar_edicion_rol" [id]="roles.id" [path]="'rol'"></app-delete-button></div>
+                    <div class="delete"><h4 class="Text">{{roles.nombre_rol}}</h4><app-delete-button *ngIf="mostrar_edicion_rol " [id]="roles.id" [path]="'rol'"></app-delete-button></div>
                     <!-- <div class="Form" *ngIf="mostrar"><form><input type="email" class="form-control"  aria-describedby="emailHelp"></form><app-save-changes-button></app-save-changes-button></div> -->
-                    <div class="container-form"><app-form-update-rol *ngIf="mostrar_edicion_rol" [id_obj]="roles.id" [id_per]="miPortfolio.id"></app-form-update-rol></div>
+                    <div class="container-form"><app-form-update-rol *ngIf="mostrar_edicion_rol " [id_obj]="roles.id" [id_per]="miPortfolio.id"></app-form-update-rol></div>
                 </li>
                 <div class="container-form"><app-form-new-rol *ngIf="mostrar_nueva_rol" [id_per]="miPortfolio.id"></app-form-new-rol></div>
             </ul>
@@ -35,7 +35,7 @@
 <div class="container_full_sobre_mi">
 <div class="sobre_mi_conteiner">
     
-   <div class="sobre_mi_title"> <h3>Sobre mi</h3><app-edit-button *ngIf="!mostrar_nueva_sobremi" (click)="modo_edicion_sobremi($event)" ></app-edit-button></div>
+   <div class="sobre_mi_title"> <h3>Sobre mi</h3><app-edit-button *ngIf="!mostrar_nueva_sobremi && portfolio" (click)="modo_edicion_sobremi($event)" ></app-edit-button></div>
    
 </div>
 <div><h5>{{miPortfolio.sobre_mi}}</h5></div>

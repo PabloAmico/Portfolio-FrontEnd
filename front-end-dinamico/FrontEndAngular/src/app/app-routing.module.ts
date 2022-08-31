@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InitSesionComponent } from './components/init-sesion/init-sesion.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { canActivate, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
+import { VistaPreviaComponent } from './components/vista-previa/vista-previa.component';
 
 const routes: Routes = [
   {path: 'portfolio',
@@ -10,7 +11,8 @@ const routes: Routes = [
   ...canActivate(() => redirectUnauthorizedTo(['/iniciar-sesion']))
   },
   {path: 'iniciar-sesion',component:InitSesionComponent},
-  {path: '', redirectTo:'iniciar-sesion',pathMatch:'full'}
+  {path: 'vista-previa',  component:VistaPreviaComponent},
+  {path: '', redirectTo:'vista-previa',pathMatch:'full'}
 ];
 
 @NgModule({

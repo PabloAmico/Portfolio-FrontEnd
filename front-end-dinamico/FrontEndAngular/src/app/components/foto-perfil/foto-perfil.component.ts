@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 
@@ -8,6 +8,8 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./foto-perfil.component.css']
 })
 export class FotoPerfilComponent implements OnInit {
+
+  @Input() portfolio:boolean = false;
 
   //atributos para ver y ocultar los botones de carga y actualizacion.
   mostrar_edicion_sobremi = false;

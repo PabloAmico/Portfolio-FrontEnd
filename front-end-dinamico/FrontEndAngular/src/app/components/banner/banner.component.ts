@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class BannerComponent implements OnInit {
   id:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
-  
+  @Input() portfolio:boolean = false;
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
