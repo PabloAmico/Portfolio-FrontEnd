@@ -14,6 +14,9 @@ export class InformationComponent implements OnInit {
   @Input() Description:string = "";
   @Input() Time:string = "";
 
+  @Input() id:any;
+  @Input() name:any;
+
 
   ngOnInit(): void {
   }

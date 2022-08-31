@@ -85,6 +85,10 @@
     display: flex;
     justify-content: start;
 }
+
+.button-upload-perfil{
+    padding-top:65% ;
+}
 @media (max-width:580px){
     .container-perfil{
         margin-top: 1%;

@@ -3,12 +3,29 @@
     max-height: 676px;
     margin: auto;
     margin-top: 5px;
+   
     /* width: 100%; */
 }
 
 .Banner{
     max-width: 920px;
     border-radius: 20px;
+}
+
+.banner{
+    /* position: relative; */
+    /* display: block; */
+    z-index: 1;
+}
+
+.button{
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    align-self:center;
+   /* right: 5%; */
+    /* top: 60%; */
+    /* right: 32%; */
 }
 
 @media (max-width:920px){

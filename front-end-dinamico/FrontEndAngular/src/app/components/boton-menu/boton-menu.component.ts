@@ -13,4 +13,11 @@ export class BotonMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Input($event:any){
+    window.scroll({
+      top:10000
+    })
+    console.log("PRESIONEEE");
+  }
+
 }

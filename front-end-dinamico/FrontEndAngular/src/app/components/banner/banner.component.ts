@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-banner',
@@ -7,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
-
   Banner:string = './assets/images/banner-def.png';
 
-  ngOnInit(): void {
-  }
+  miPortfolio:any;
+  id:any;
+  constructor(private datosPortfolio:PortfolioService) { }
 
+  
+
+  ngOnInit(): void {
+    this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
+      // console.log(data);
+      this.miPortfolio=data[0];
+      this.id = this.miPortfolio.id;
+      //console.log(this.miPortfolio.nombre);
+    });
+  }
 }

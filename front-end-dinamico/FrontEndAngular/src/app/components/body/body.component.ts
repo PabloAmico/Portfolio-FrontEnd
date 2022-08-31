@@ -32,6 +32,8 @@ export class BodyComponent implements OnInit {
   nueva_skills = false;
 
 
+  mostrar_edicion_contacto = false;
+  edicion_contacto = false;
 
   id:any;
   miPortfolio:any;
@@ -39,6 +41,7 @@ export class BodyComponent implements OnInit {
   miEducacion:any;
   miCurso:any;
   miSkill:any;
+  miContacto:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -65,12 +68,18 @@ export class BodyComponent implements OnInit {
       this.miCurso = data;
       //console.log(this.miCurso);
 
+    
+    })
       //obtengo los datos de las skills.
       this.datosPortfolio.obtenerDatosSkills(this.id).subscribe(data=>{
         this.miSkill = data;
         //console.log(this.miSkill);
       })
-    })
+
+      this.datosPortfolio.obtenerDatosContactos(this.id).subscribe(data=>{
+        this.miContacto = data[0];
+        console.log(this.miContacto);
+      })
   });
   
 }
@@ -249,6 +258,30 @@ revisar_nueva_skills(){
   }else{
     if(this.nueva_skills){      
       this.mostrar_nueva_skills = true;
+    }
+  }
+}
+
+
+modo_edicion_contacto(event:any){
+  if(!this.edicion_contacto){
+
+    this.edicion_contacto = true;
+
+  }else{
+   
+    this.edicion_contacto = false;
+  }
+  this.revisar_contacto();
+  
+}
+
+revisar_contacto(){
+  if(this.id < 0 || !this.edicion_contacto){
+    this.mostrar_edicion_contacto = false;
+  }else{
+    if(this.edicion_contacto){      
+      this.mostrar_edicion_contacto = true;
     }
   }
 }

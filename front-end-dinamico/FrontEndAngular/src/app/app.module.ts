@@ -38,6 +38,13 @@ import { DeleteButtonComponent } from './components/delete-button/delete-button.
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { UploadImagePerfilComponent } from './components/upload-image-perfil/upload-image-perfil.component';
+import { UploadImageBannerComponent } from './components/upload-image-banner/upload-image-banner.component';
+import { UploadImageExperienciaComponent } from './components/upload-image-experiencia/upload-image-experiencia.component';
+import { ButtonContactoComponent } from './components/button-contacto/button-contacto.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { FormUpdateContactoComponent } from './components/form-update-contacto/form-update-contacto.component';
 
 
 
@@ -76,6 +83,12 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     FormUpdateRolComponent,
     FormNewRolComponent,
     DeleteButtonComponent,
+    UploadImagePerfilComponent,
+    UploadImageBannerComponent,
+    UploadImageExperienciaComponent,
+    ButtonContactoComponent,
+    ContactoComponent,
+    FormUpdateContactoComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +96,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     ReactiveFormsModule,
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    provideStorage(() => getStorage())
    
   ],
   

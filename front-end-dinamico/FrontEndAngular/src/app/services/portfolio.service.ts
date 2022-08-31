@@ -45,12 +45,15 @@ export class PortfolioService {
     return this.http.get(this.url + "/ver/rol/" + id);
   }
 
+  obtenerDatosContactos(id:any):Observable<any>{
+    return this.http.get(this.url + "/ver/contacto/" + id);
+  }
+
   /*actualizarDatosExperienciaSinFoto(id_person:any,id_obj:any,nombre:any,descripcion:any,fecha_inicio:any,fecha_fin:any){
     this.http.get(this.url + "/actualizar/experiencia/sinfoto/"+id_person+"/"+id_obj+"/"+nombre+"/"+descripcion+"/"+fecha_inicio+"/"+fecha_fin);
   }*/
 
   actualizarDatosExperiencia(obj:any, id:any):Observable<any>{
-    console.log(this.url+"/actualizar/experiencia/"+id);
     console.log(obj);
     return this.http.post(this.url+"/actualizar/experiencia/"+id,obj, httpOptions);
   } 
@@ -60,7 +63,6 @@ export class PortfolioService {
   }
 
   actualizarDatosEducacion(obj:any, id:any):Observable<any>{
-    console.log(this.url+"/actualizar/experiencia/"+id);
     console.log(obj);
     return this.http.post(this.url+"/actualizar/educacion/"+id,obj, httpOptions);
   } 
@@ -70,7 +72,6 @@ export class PortfolioService {
   }
 
   actualizarDatosCursos(obj:any, id:any):Observable<any>{
-    console.log(this.url+"/actualizar/experiencia/"+id);
     console.log(obj);
     return this.http.post(this.url+"/actualizar/curso/"+id,obj, httpOptions);
   } 
@@ -96,7 +97,6 @@ export class PortfolioService {
 
 
   actualizarDatosRol(obj:any, id:any):Observable<any>{
-    console.log(this.url+"/actualizar/experiencia/"+id);
     console.log(obj);
     return this.http.post(this.url+"/actualizar/rol/"+id,obj, httpOptions);
   } 
@@ -107,5 +107,18 @@ export class PortfolioService {
 
   deleteDato(id:any, path:string):Observable<any>{
     return this.http.delete(this.url+"/delete/"+path+"/"+id, httpOptions);
+  }
+
+  nuevaImagenPerfil_Banner(obj:any, path:any):Observable<any>{
+
+    return this.http.post(this.url+"/actualizar/persona/"+path,obj, httpOptions);
+  }
+
+  nuevaImagenBody(obj:any,path:any,):Observable<any>{
+    return this.http.post(this.url+"/actualizar/"+path+"/imagen",obj, httpOptions);
+  }
+
+  actualizarContacto(obj:any ):Observable<any>{
+    return this.http.post(this.url+"/actualizar/contacto/",obj, httpOptions);
   }
 }

@@ -11,17 +11,15 @@ export class HeaderComponent implements OnInit {
   id:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
+  
+
   ngOnInit(): void {
-      /*this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
+    this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
       // console.log(data);
-      this.miPortfolio=data;
-      //console.log(this.miPortfolio);
+      this.miPortfolio=data[0];
       this.id = this.miPortfolio.id;
+      //console.log(this.miPortfolio.nombre);
     });
-    this.datosPortfolio.obtenerDatosExperiencia(this.id).subscribe(data =>{
-      this.miPortfolio = data[0];
-      console.log(this.miPortfolio);
-    })*/
   }
 
 }

@@ -29,11 +29,11 @@ export class FotoPerfilComponent implements OnInit {
   id:number = 0;
   mostrar = false;
   edicion = false;
-  url:string = './assets/images/foto-escalada.png';
-  Nombre:string = 'Amico Pablo Andres';
-  Puesto_1:string = 'Full Stack Developer Jr.';
-  Puesto_2:string = 'Game Developer';
-  Localidad:string = 'Santa Fe, Argentina';
+  //url:string = './assets/images/foto-escalada.png';
+ // Nombre:string = 'Amico Pablo Andres';
+  //Puesto_1:string = 'Full Stack Developer Jr.';
+  //Puesto_2:string = 'Game Developer';
+  //Localidad:string = 'Santa Fe, Argentina';
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosPersonales().subscribe(data =>{
       // console.log(data);

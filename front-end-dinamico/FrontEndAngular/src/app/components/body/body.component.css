@@ -4,7 +4,7 @@
 
 .prueba{
     display: flex;
-    width: auto;
+    /* width: auto; */
 }
 
 .container{
@@ -31,4 +31,15 @@
 
 .delete_skill{
     display: flex;
+}
+
+.upload{
+    display: flex;
+    margin: 0%;
+    
+}
+
+.container-contacto{
+    display: flex;
+    
 }

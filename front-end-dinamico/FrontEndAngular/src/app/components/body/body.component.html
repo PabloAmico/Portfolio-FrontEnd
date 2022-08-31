@@ -4,7 +4,7 @@
         
         <ul>
             <li class="lista" *ngFor="let exp of miExperiencia">
-              <div class="prueba">  <app-information  Image="./assets/images/ATEM.png" Title={{exp.nombre_empresa}} Description={{exp.descripcion}} Time="{{exp.fecha_inicio}} - {{exp.fecha_fin}}"> </app-information><div class="delete"><app-delete-button *ngIf="mostrar_edicion_experiencia" [id]="exp.id" [path]="'experiencia'"></app-delete-button></div>
+                 <div class="prueba"><app-information id="{{exp.id}}" name='exp' Image="{{exp.url_imagen}}"  Title={{exp.nombre_empresa}} Description={{exp.descripcion}} Time="{{exp.fecha_inicio}} - {{exp.fecha_fin}}"> </app-information><div class="delete"><app-delete-button *ngIf="mostrar_edicion_experiencia" [id]="exp.id" [path]="'experiencia'"></app-delete-button></div>
                 <div class="container-form"><app-form-experiencia *ngIf="mostrar_edicion_experiencia" [id_obj]="exp.id" [id_per]="miPortfolio.id"></app-form-experiencia></div>
                 
             </div>
@@ -16,7 +16,7 @@
     <div>
         <ul>
             <li class="lista" *ngFor="let edu of miEducacion">
-                <div class="prueba"><app-information Image="./assets/images/FICH-logo.png" Title="{{edu.institucion}}" Description="{{edu.descripcion}}" Time="{{edu.fecha_inicio}} - {{edu.fecha_fin}}"></app-information><div class="delete"><app-delete-button *ngIf="mostrar_edicion_educacion" [id]="edu.id" [path]="'educacion'"></app-delete-button></div>
+                <div class="prueba"><app-information id="{{edu.id}}" name='edu' Image="{{edu.url_imagen}}" Title="{{edu.institucion}}" Description="{{edu.descripcion}}" Time="{{edu.fecha_inicio}} - {{edu.fecha_fin}}"></app-information><div class="delete"><app-delete-button *ngIf="mostrar_edicion_educacion" [id]="edu.id" [path]="'educacion'"></app-delete-button></div>
                     <div class="container-form"><app-form-update-educacion *ngIf="mostrar_edicion_educacion" [id_obj]="edu.id" [id_per]="miPortfolio.id"></app-form-update-educacion></div>
                 </div>
             </li>
@@ -29,7 +29,7 @@
     <div>
         <ul>
             <li class="lista" *ngFor="let cur of miCurso">
-                <div class="prueba"> <app-information Image="./assets/images/logo-ArgentinaPrograma.png" Title="{{cur.nombre}}" Description="{{cur.descripcion}}" Time="{{cur.fecha_inicio}} - {{cur.fecha_final}}"></app-information><div class="delete"><app-delete-button *ngIf="mostrar_edicion_curso" [id]="cur.id" [path]="'curso'"></app-delete-button></div>
+                <div class="prueba"> <app-information id="{{cur.id}}" name='cur' Image="{{cur.url_imagen}}" Title="{{cur.nombre}}" Description="{{cur.descripcion}}" Time="{{cur.fecha_inicio}} - {{cur.fecha_final}}"></app-information><div class="delete"><app-delete-button *ngIf="mostrar_edicion_curso" [id]="cur.id" [path]="'curso'"></app-delete-button></div>
                     <div class="container-form"><app-form-update-curso *ngIf="mostrar_edicion_curso" [id_obj]="cur.id" [id_per]="miPortfolio.id"></app-form-update-curso></div>
                 </div>
             </li>
@@ -52,4 +52,7 @@
             </div>
         </div>
     </div>
+
+    <div class="container-contacto"><app-edit-button  (click)="modo_edicion_contacto($event)" ></app-edit-button><app-contacto telefono="{{miContacto.telefono}}" email="{{miContacto.mail}}"></app-contacto></div>
+    <div class="container-form"><app-form-update-contacto *ngIf="mostrar_edicion_contacto" [id_per]="miContacto.id"></app-form-update-contacto></div>
 </div>
